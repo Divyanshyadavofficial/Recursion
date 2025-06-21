@@ -30,8 +30,10 @@ public class Recursion {
             return;
         }// this is the base condition
         System.out.println(n);
+        //  this is called tail recursion i.e it is the last func call
         print(n+1);
     }
+    // recursive call
     // if you are calling a fn again and again you can treat it as
     // a seprate call in the stack..
 
@@ -44,13 +46,6 @@ public class Recursion {
     3. space complexity is not constant because of the recursion calls
 
     visualizing Recursion  --> recursion tree..
-
-
-
-
-
-
-
     */
 
 
