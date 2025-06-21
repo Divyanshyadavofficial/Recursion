@@ -13,7 +13,7 @@ public class NthFibbonaciNumber {
         }
         return  fibo(n-1)+fibo(n-2);// when you write recursion
                                             // in a formula that's recurrence
-                                            //   relation
+                                            //   relation golden ratio power n.
     }
      // how to understand and approach a problem
     // 1. identify if you can break down problem into smaller problems
@@ -27,6 +27,8 @@ public class NthFibbonaciNumber {
     // 5. see how the values and what values are returned at each step
     //    see where the functipn call will come out, In the end
     //    you will come out of the main function
+
+
 
 
 }
