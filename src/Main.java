@@ -113,6 +113,7 @@ public class Main {
 
 // solving linear recurrences
 //    f(n) = f(n-1) + f(n-2)
+//    fn = alpha^n.
 //    form
 //    f(x) = a1f(x-1) + a2f(x-2)+a3f(x-3)+---+anf(x-n)
 //    f(x) = sum of(ai f(x-i), 1 till n. for ai , n is fixed
@@ -120,6 +121,28 @@ public class Main {
 //    2. f(n) = c1(root1)^n + c2(root2)^n.
 //    3. no. of roots = no. of answers you have already.
 //    f(n) = O(1.6180)^n. time complexity for nth fibbonaci num.
+//    for equal roots
+//    if alpha is repeated r times then alpha^n, n*alpha^n,---,n^r-1*alpha(n)
+//    are all solutions to the recurrence.
+//    hence i can take 2 roots as 1 itself, nalpha^n.
+//    it is homogeneous recurrence relation
+//    cuz you dont have g(x) here.
+//
+//    non homogeneous recurrences
+//     they have the extra fn g(x)
+//    how to solve
+//    1). replace g(n) by 0 and solve usually
+//    2). take g(n) on one side and find particular solutions
+//        guess something that is similar to g(n).
+//    3). if g(n) = n^2, guess a polynomial of degree 2.
+//    4). add both solutions together.
+//    how to guess the particular soln
+//    --->  if g(n) is exponential, guess of same type
+//    ---> if it is polynomial guess of same degree
+//    --->lets say you guessed f(n) = a*2^n and if fails
+//    ---> then try (an+b)2^n, if this also fails increase
+//    ---> the degree (a^2n+bn+c)2^n.
+
 public static void main(String[] args) {
     int ans = fib(4);
     System.out.println(ans);
