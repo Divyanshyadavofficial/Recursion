@@ -13,6 +13,9 @@ public class BinarySearchUsingRecursion {
         // whenever you are calling a recursion call
         // make sure you sre returning it if it has
         // a return type...
+        // make sure the return type is same for all the function
+        // calls you re returning.
+
         int[] arr = {1,2,3,4,5,6,7,8};
         int result = search(arr,7,1,8);
         System.out.println(result);
