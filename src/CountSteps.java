@@ -1,11 +1,12 @@
 public class CountSteps {
     public static void main(String[] args) {
-
+        int result = numberOfSteps(222);
+        System.out.println(result);
     }
-    public int numnerOfSteps(int num){
+    static int numberOfSteps(int num){
         return helper(num,0);
     }
-    private int helper(int num,int steps){
+    private static int helper(int num,int steps){
         if(num==0){
             return steps;
         }
