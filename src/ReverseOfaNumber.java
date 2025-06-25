@@ -5,6 +5,8 @@ public class ReverseOfaNumber {
         System.out.println(Reverse2(1234));
     }
     static int sum = 0;
+
+    
     static void Reverse(int n){
         if(n==0){
             return;
