@@ -2,6 +2,8 @@ public class SumOfDigits {
     public static void main(String[] args) {
         int result = sumOfdigits(1342);
         System.out.println(result);
+
+        
     }
     static int sumOfdigits(int n){
         if(n==0){
