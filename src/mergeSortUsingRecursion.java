@@ -17,9 +17,13 @@ public class mergeSortUsingRecursion {
 //        2t(n/2)+(n-1)
 //        space complexity = O(n).
 //
-        int[] arr = {5,4,3,2,1};
-        arr = mergeSort(arr);
+//        int[] arr = {5,4,3,2,1};
+//        arr = mergeSort(arr);
+//        System.out.println(Arrays.toString(arr));
+        int[]arr = {5,4,3,2,1};
+          inplaceMergeSort(arr,0,arr.length);
         System.out.println(Arrays.toString(arr));
+
     }
     static int[] mergeSort(int[]arr){
         if (arr.length==1){
@@ -58,5 +62,46 @@ public class mergeSortUsingRecursion {
             k++;
         }
         return mix;
+    }
+    static void inplaceMergeSort(int[]arr,int s,int e){
+        if (e-s==1){
+            return;
+        }
+        int mid = (s+e)/2;
+        inplaceMergeSort(arr,s,mid);
+        inplaceMergeSort(arr,mid,e);
+         mergeInPlace(arr,s,mid,e);
+    }
+    private static void mergeInPlace(int[]arr,int s,int m,int e){
+        int[] mix = new int[e-s];
+        int i = s;
+        int j = m;
+        int k = 0;
+        while(i<m && j<e){
+            if(arr[i]<arr[j]){
+                mix[k] = arr[i];
+                i++;
+            }else{
+                mix[k] = arr[j];
+                j++;
+            }
+            k++;
+        }
+        while(i<m){
+            mix[k] = arr[i];
+            i++;
+            k++;
+        }
+        while(j<e){
+            mix[k]=arr[j];
+            j++;
+            k++;
+        }
+        for (int l = 0; l < mix.length; l++) {
+            arr[s+l] = mix[l];
+
+            
+        }
+       
     }
 }
