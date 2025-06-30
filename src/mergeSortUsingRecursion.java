@@ -11,6 +11,11 @@ public class mergeSortUsingRecursion {
 //        in this original array is not modified every time it creates
 //        a new left and right and merge them in a new array.
 //        of size left+right.
+//        at every level n elements are being merged
+//        O(nlogn).
+//        t(n/2) + t(n/2) + (n-1)
+//        2t(n/2)+(n-1)
+//        space complexity = O(n).
 //
         int[] arr = {5,4,3,2,1};
         arr = mergeSort(arr);
