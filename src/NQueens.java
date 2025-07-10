@@ -63,3 +63,5 @@ public class NQueens {
 
     }
 }
+// Recurrence relation --> T(N) = N*T(N-1) +O(N**2).
+//time complexity ---> O(N!).
